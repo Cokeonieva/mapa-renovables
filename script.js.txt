@@ -1,0 +1,22 @@
+const map = L.map('map').setView([40.4168, -3.7038], 6); // Centro en Madrid
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+// Cargar GeoJSON con puntos
+fetch('datos.geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      onEachFeature: function (feature, layer) {
+        const props = feature.properties;
+        layer.bindPopup(`
+          <strong>${props.nombre}</strong><br>
+          Tipo: ${props.tipo}<br>
+          Capacidad: ${props.capacidad} MW<br>
+          Estado: ${props.estado}
+        `);
+      }
+    }).addTo(map);
+  });

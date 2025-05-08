@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Planta Solar Sevilla",
+        "tipo": "Fotovoltaica",
+        "capacidad": 50,
+        "estado": "En operación"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-5.9732, 37.3826]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Parque Eólico Zaragoza",
+        "tipo": "Eólica",
+        "capacidad": 30,
+        "estado": "En construcción"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.8891, 41.6488]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Biogás Toledo",
+        "tipo": "Biogás",
+        "capacidad": 15,
+        "estado": "En desarrollo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-4.0273, 39.8628]
+      }
+    }
+  ]
+}
